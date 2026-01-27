@@ -1,0 +1,214 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import PageHero from "@/components/ui/PageHero";
+import TechSlider from "@/components/ui/TechSlider";
+import {
+  CheckCircle2,
+  ArrowRight,
+  Workflow,
+  Zap,
+  ShieldCheck,
+  Scaling,
+  Database,
+  Settings,
+  Search,
+  MessageSquare,
+  Rocket,
+  Activity,
+  Github,
+  Monitor,
+  Cloud
+} from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "DevOps Services | Genius Technology",
+  description:
+    "Professional DevOps and automation services by Genius Technology. We bridge the gap between development and operations through CI/CD, cloud infrastructure, and automation.",
+};
+
+const features = [
+  {
+    title: "CI / CD Pipelines",
+    desc: "Automated testing and deployment workflows that ensure code is always production-ready and bugs are caught early.",
+    icon: Workflow
+  },
+  {
+    title: "Infrastructure as Code",
+    desc: "Managing and provisioning infrastructure through machine-readable definition files (Terraform, Ansible).",
+    icon: Settings
+  },
+  {
+    title: "Containerization",
+    desc: "Packaging applications and their dependencies into lightweight containers (Docker) for consistent execution across environments.",
+    icon: Database
+  },
+  {
+    title: "Orchestration (Kubernetes)",
+    desc: "Scalable management of containerized applications focused on high availability and self-healing systems.",
+    icon: Activity
+  },
+  {
+    title: "Cloud Performance Monitoring",
+    desc: "24/7 visibility into system health, performance metrics, and application logs to ensure peak uptime.",
+    icon: Monitor
+  },
+  {
+    title: "DevSecOps Integration",
+    desc: "Integrating security tools and practices directly into the development lifecycle for early threat detection.",
+    icon: ShieldCheck
+  }
+];
+
+const techStack = [
+  "Docker", "Kubernetes", "Terraform", "Jenkins", "GitHub Actions", "GitLab CI",
+  "Ansible", "AWS CloudFormation", "Prometheus", "Grafana", "ELK Stack", "New Relic"
+];
+
+export default function DevOpsServicesPage() {
+  return (
+    <main className="w-full bg-white">
+
+      {/* ================= HERO ================= */}
+      <PageHero
+        category="DevOps Services"
+        title="Automate, Scale, and Secure |Your Software Delivery Lifecycle"
+        description="We help organizations bridge the gap between development and operations. Our DevOps services focus on automation, reliability, and faster time-to-market for your digital products."
+      />
+
+      {/* ================= CORE VALUE PROPOSITION ================= */}
+      <section className="w-full py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="animate-[fadeUp_0.8s_ease-out_forwards]">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-black tracking-tight leading-tight">
+                Software Delivery at the <span className="text-[var(--brand-blue)]">Speed of Business</span>
+              </h2>
+              <p className="mt-8 text-gray-600 text-lg leading-relaxed">
+                Slow, manual deployment processes are a major bottleneck. Our DevOps approach eliminates friction, enabling your team to ship high-quality features faster and more reliably than ever before.
+              </p>
+
+              <div className="mt-10 space-y-4">
+                <BenefitItem text="Significant reduction in deployment lead times." />
+                <BenefitItem text="Improved stability through automated testing and QA." />
+                <BenefitItem text="Scalable infrastructure that handles growth effortlessly." />
+                <BenefitItem text="Lower operational costs through intelligent automation." />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
+              <StatCard label="90%+" desc="Automation Coverage" />
+              <StatCard label="Daily" desc="Deployment Frequency" />
+              <StatCard label="Self-Healing" desc="Infrastructure" />
+              <StatCard label="Reliable" desc="Zero Downtime" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= FEATURES GRID ================= */}
+      <section className="w-full py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-black">Our DevOps Expertise</h2>
+            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+              Technological solutions focused on speed, efficiency, and infrastructure reliability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={feature.title} className="bg-white p-10 rounded-3xl border border-black/5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-[var(--brand-blue)]/10 flex items-center justify-center mb-8 text-[var(--brand-blue)]">
+                  <feature.icon size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-black mb-4">{feature.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= TECH STACK ================= */}
+      <section className="w-full py-24 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-black">Our Automation Toolkit</h2>
+          <p className="mt-4 text-gray-500 text-sm">We use industry-leading tools to automate infrastructure and accelerate delivery.</p>
+        </div>
+
+        <TechSlider items={techStack} />
+      </section>
+
+      {/* ================= PROCESS ================= */}
+      <section className="w-full py-24 bg-gray-900 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
+          <div className="text-center mb-20 text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">The DevOps Lifecycle</h2>
+            <p className="mt-4 text-gray-400">A continuous loop of planning, delivery, and operational excellence.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+            <ProcessItem num="01" icon={Workflow} title="Continuous Integration" desc="Merging and validating code changes frequently to detect bugs early." />
+            <ProcessItem num="02" icon={Rocket} title="Continuous Delivery" desc="Automating the release process to ensure reliable, high-frequency shipping." />
+            <ProcessItem num="03" icon={Monitor} title="Continuous Monitor" desc="Real-time visibility into infrastructure health and user experience." />
+            <ProcessItem num="04" icon={Settings} title="Continuous Optimize" desc="Iteratively improving performance and cost efficiency of cloud assets." />
+          </div>
+        </div>
+      </section>
+
+      {/* ================= CTA ================= */}
+      <section className="w-full py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--brand-blue)]/5 text-[var(--brand-blue)] text-sm font-semibold mb-8">
+            Ship Faster
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-bold text-black tracking-tight leading-tight">
+            Ready to <span className="text-[var(--brand-blue)]">Accelerate</span> Your Release Cycles?
+          </h2>
+          <p className="mt-8 text-gray-600 max-w-2xl mx-auto text-lg">
+            Let's discuss how we can help you build a robust and automated software delivery pipeline.
+          </p>
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/contact"
+              className="px-10 py-4 rounded-full bg-[var(--brand-blue)] text-white font-semibold text-lg hover:bg-[var(--brand-blue-dark)] transition-all shadow-xl shadow-blue-400/20 hover:-translate-y-1"
+            >
+              Get a Free DevOps Audit
+            </Link>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  );
+}
+
+// Subcomponents
+
+const BenefitItem = ({ text }: { text: string }) => (
+  <div className="flex items-start gap-3">
+    <CheckCircle2 className="w-6 h-6 text-[var(--brand-blue)] flex-shrink-0" />
+    <span className="text-gray-700 font-medium">{text}</span>
+  </div>
+);
+
+const StatCard = ({ label, desc }: { label: string; desc: string }) => (
+  <div className="bg-gray-50 p-8 rounded-3xl border border-black/5 text-center">
+    <div className="text-2xl font-bold text-black mb-1">{label}</div>
+    <div className="text-xs text-gray-500 font-medium uppercase tracking-wider">{desc}</div>
+  </div>
+);
+
+const ProcessItem = ({ num, icon: Icon, title, desc }: { num: string; icon: any; title: string, desc: string }) => (
+  <div className="text-center group">
+    <div className="relative mb-8 flex justify-center">
+      <div className="absolute top-1/2 -right-1/2 w-full h-[1px] bg-white/10 hidden md:block" />
+      <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[var(--brand-blue)] relative z-10 group-hover:bg-[var(--brand-blue)] group-hover:text-white transition-all duration-300">
+        <Icon size={24} />
+      </div>
+      <div className="absolute -top-4 -right-4 text-xs font-bold text-white/20 select-none">{num}</div>
+    </div>
+    <h3 className="text-white font-semibold text-lg mb-3">{title}</h3>
+    <p className="text-gray-500 text-sm leading-relaxed px-2">{desc}</p>
+  </div>
+);

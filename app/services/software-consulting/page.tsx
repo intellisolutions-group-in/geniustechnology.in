@@ -1,0 +1,213 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import PageHero from "@/components/ui/PageHero";
+import TechSlider from "@/components/ui/TechSlider";
+import {
+  CheckCircle2,
+  ArrowRight,
+  MonitorCheck,
+  Zap,
+  ShieldCheck,
+  Scaling,
+  Search,
+  MessageSquare,
+  Rocket,
+  Lightbulb,
+  Target,
+  LineChart,
+  Users,
+  Briefcase
+} from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Software Consulting Services | Genius Technology",
+  description:
+    "Expert technology consulting services by Genius Technology. We provide strategic guidance, architectural reviews, and technical decision support to help businesses innovate.",
+};
+
+const features = [
+  {
+    title: "Technology Roadmap Design",
+    desc: "Developing a clear, executable technical strategy that aligns with your long-term business objectives.",
+    icon: Target
+  },
+  {
+    title: "Architectural Reviews",
+    desc: "Deep-dive analysis of your existing software architecture to identify bottlenecks, risks, and scalability opportunities.",
+    icon: Search
+  },
+  {
+    title: "Digital Transformation",
+    desc: "Guiding businesses through the process of modernizing their operations with modern cloud and AI technologies.",
+    icon: Zap
+  },
+  {
+    title: "Vendor Selection Support",
+    desc: "Expert technical guidance to help you select the right platforms, tools, and partners for your organizational growth.",
+    icon: Briefcase
+  },
+  {
+    title: "Process Optimization",
+    desc: "Evaluating and Improving your internal development, deployment, and operational processes for maximum efficiency.",
+    icon: Scaling
+  },
+  {
+    title: "AI Strategy Consulting",
+    desc: "Identifying high-impact AI opportunities and developing a practical implementation path for your organization.",
+    icon: Lightbulb
+  }
+];
+
+const techStack = [
+  "Cloud Strategy", "Microservices", "Security Compliance", "Agile Coaching", "AI Readiness",
+  "Data Strategy", "Vendor Assessment", "ROI Modeling", "Legacy Migration", "DevOps Maturity"
+];
+
+export default function SoftwareConsultingPage() {
+  return (
+    <main className="w-full bg-white">
+
+      {/* ================= HERO ================= */}
+      <PageHero
+        category="Software Consulting"
+        title="Navigate the Digital Frontier |With Strategic Technical Guidance"
+        description="We partner with stakeholders to make informed, data-driven technology decisions. From architectural audits to long-term roadmaps, we provide the clarity needed to innovate and scale."
+      />
+
+      {/* ================= CORE VALUE PROPOSITION ================= */}
+      <section className="w-full py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="animate-[fadeUp_0.8s_ease-out_forwards]">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-black tracking-tight leading-tight">
+                Build a <span className="text-[var(--brand-blue)]">Solid Technical Foundation</span> for Growth
+              </h2>
+              <p className="mt-8 text-gray-600 text-lg leading-relaxed">
+                Technology should be an enabler, not a bottleneck. We provide the expertise needed to align your technical choices with your business goals, ensuring every investment delivers real value.
+              </p>
+
+              <div className="mt-10 space-y-4">
+                <BenefitItem text="Expert clarity on complex technical decisions." />
+                <BenefitItem text="Mitigated risk in large-scale digital transitions." />
+                <BenefitItem text="Accelerated time-to-market for new initiatives." />
+                <BenefitItem text="Objective, third-party architectural assessments." />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
+              <StatCard label="Direct" desc="Impact on ROI" />
+              <StatCard label="Strategic" desc="Alignment Focus" />
+              <StatCard label="Reliable" desc="Decision Support" />
+              <StatCard label="Modern" desc="Tech Insights" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= FEATURES GRID ================= */}
+      <section className="w-full py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-black">Our Consulting Services</h2>
+            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+              Strategic technical partnership designed to navigate the complexities of modern software engineering.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={feature.title} className="bg-white p-10 rounded-3xl border border-black/5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-[var(--brand-blue)]/10 flex items-center justify-center mb-8 text-[var(--brand-blue)]">
+                  <feature.icon size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-black mb-4">{feature.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= TECH STACK ================= */}
+      <section className="w-full py-24 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-black">Our Areas of Expertise</h2>
+          <p className="mt-4 text-gray-500 text-sm">We provide strategic consultation across a wide range of modern technology domains.</p>
+        </div>
+
+        <TechSlider items={techStack} />
+      </section>
+
+      {/* ================= PROCESS ================= */}
+      <section className="w-full py-24 bg-gray-900 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
+          <div className="text-center mb-20 text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Consulting Engagement Roadmap</h2>
+            <p className="mt-4 text-gray-400">A clear, collaborative path from assessment to actionable strategy.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+            <ProcessItem num="01" icon={MessageSquare} title="Discovery" desc="Deep-dive into organizational goals, pain points, and existing infrastructure." />
+            <ProcessItem num="02" icon={Search} title="Analysis" desc="Objective evaluation of technical data, architecture, and market options." />
+            <ProcessItem num="03" icon={Target} title="Strategy" desc="Developing a clear roadmap with prioritized technical initiatives." />
+            <ProcessItem num="04" icon={CheckCircle2} title="Execution" desc="Ongoing support and guidance through the implementation phase." />
+          </div>
+        </div>
+      </section>
+
+      {/* ================= CTA ================= */}
+      <section className="w-full py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--brand-blue)]/5 text-[var(--brand-blue)] text-sm font-semibold mb-8">
+            Consult With Experts
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-bold text-black tracking-tight leading-tight">
+            Ready to Build Your <span className="text-[var(--brand-blue)]">Strategic Advantage</span>?
+          </h2>
+          <p className="mt-8 text-gray-600 max-w-2xl mx-auto text-lg">
+            Let's discuss your technology challenges and build a roadmap for your organization's digital success.
+          </p>
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/contact"
+              className="px-10 py-4 rounded-full bg-[var(--brand-blue)] text-white font-semibold text-lg hover:bg-[var(--brand-blue-dark)] transition-all shadow-xl shadow-blue-400/20 hover:-translate-y-1"
+            >
+              Book a Strategy Session
+            </Link>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  );
+}
+
+// Subcomponents
+
+const BenefitItem = ({ text }: { text: string }) => (
+  <div className="flex items-start gap-3">
+    <CheckCircle2 className="w-6 h-6 text-[var(--brand-blue)] flex-shrink-0" />
+    <span className="text-gray-700 font-medium">{text}</span>
+  </div>
+);
+
+const StatCard = ({ label, desc }: { label: string; desc: string }) => (
+  <div className="bg-gray-50 p-8 rounded-3xl border border-black/5 text-center">
+    <div className="text-2xl font-bold text-black mb-1">{label}</div>
+    <div className="text-xs text-gray-500 font-medium uppercase tracking-wider">{desc}</div>
+  </div>
+);
+
+const ProcessItem = ({ num, icon: Icon, title, desc }: { num: string; icon: any; title: string, desc: string }) => (
+  <div className="text-center group">
+    <div className="relative mb-8 flex justify-center">
+      <div className="absolute top-1/2 -right-1/2 w-full h-[1px] bg-white/10 hidden md:block" />
+      <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[var(--brand-blue)] relative z-10 group-hover:bg-[var(--brand-blue)] group-hover:text-white transition-all duration-300">
+        <Icon size={24} />
+      </div>
+      <div className="absolute -top-4 -right-4 text-xs font-bold text-white/20 select-none">{num}</div>
+    </div>
+    <h3 className="text-white font-semibold text-lg mb-3">{title}</h3>
+    <p className="text-gray-500 text-sm leading-relaxed px-2">{desc}</p>
+  </div>
+);
