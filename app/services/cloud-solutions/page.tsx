@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import TechSlider from "@/components/ui/TechSlider";
 import {
@@ -94,11 +95,14 @@ export default function CloudSolutionsPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
-              <StatCard label="30%+" desc="Lower IT Costs" />
-              <StatCard label="99.99%" desc="Guaranteed Uptime" />
-              <StatCard label="Scalable" desc="Instant Deployment" />
-              <StatCard label="Global" desc="Edge Delivery" />
+            <div className="animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
+              <Image 
+                src="/images/services/Cloud-Solutions.jpg" 
+                alt="Cloud Solutions Services"
+                width={800}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>

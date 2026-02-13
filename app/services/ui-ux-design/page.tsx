@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import TechSlider from "@/components/ui/TechSlider";
 import {
@@ -97,11 +98,14 @@ export default function UiUxDesignPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
-              <StatCard label="40%+" desc="Increase in Conversion" />
-              <StatCard label="80%+" desc="User Task Success" />
-              <StatCard label="WCAG 2.1" desc="Compliance Standard" />
-              <StatCard label="Premium" desc="Visual Excellence" />
+            <div className="animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
+              <Image 
+                src="/images/services/UI-UX-Design.jpg" 
+                alt="Design Statistics - 40%+ Increase in Conversion, 80%+ User Task Success, WCAG 2.1 Compliance, Premium Visual Excellence"
+                width={800}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>

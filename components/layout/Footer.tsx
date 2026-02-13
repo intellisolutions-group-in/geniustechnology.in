@@ -14,7 +14,7 @@ const Footer = () => {
             <img
               src="/images/logo-footer.svg"
               alt="Genius Technology Logo"
-              className="h-8 mb-4"
+              className="h-15 mb-4"
             />
             <p className="text-sm leading-relaxed text-gray-400">
               Genius Technology is an IT services and software development company

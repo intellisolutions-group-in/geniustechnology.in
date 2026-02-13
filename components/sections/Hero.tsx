@@ -12,7 +12,7 @@ const Hero = () => {
         This prevents hero content from hiding behind the sticky navbar
       */}
       <div className="w-full px-4 sm:px-6 lg:px-16 pt-2 opacity-0 animate-[fadeUp_0.8s_ease-out_forwards]">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
 
           {/* Eyebrow */}
           <p className="mb-4 text-sm font-medium tracking-wide text-black uppercase">
@@ -30,14 +30,14 @@ const Hero = () => {
           </h1>
 
           {/* Description */}
-          <p className="mt-6 text-base sm:text-lg text-gray-600 max-w-2xl">
+          <p className="mt-6 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Modern businesses expect technology to be intuitive, dependable, and
             easy to scale. Whether it's building a new web platform, launching a
             mobile application, integrating cloud infrastructure, or optimising
             digital performance, these processes should be seamless and efficient.
           </p>
 
-          <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl">
+          <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             That's where <strong>Genius Technology</strong> comes in — enabling
             organisations to design, develop, and manage digital solutions that
             improve operational efficiency and deliver meaningful user
@@ -47,7 +47,7 @@ const Hero = () => {
           </p>
 
           {/* CTAs */}
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link
               href="/contact"
               className="px-8 py-3 rounded-lg bg-[var(--brand-blue)] text-white font-medium hover:bg-[var(--brand-blue-dark)] transition-colors"

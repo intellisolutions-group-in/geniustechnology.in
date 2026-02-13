@@ -147,7 +147,7 @@ const Header = () => {
             <img
               src="/images/logo.svg"
               alt="Genius Technology Logo"
-              className="h-8"
+              className="h-auto"
             />
           </Link>
 

@@ -106,6 +106,31 @@ export default function ContactClient() {
         </div>
       </section>
 
+      {/* ================= MAP SECTION ================= */}
+      <section className="w-full py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-black">
+              Find Us Here
+            </h2>
+            <p className="mt-4 text-gray-600">
+              Visit our office in Vadodara, Gujarat
+            </p>
+          </div>
+          <div className="w-full rounded-2xl overflow-hidden shadow-lg">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2270.6556287478434!2d73.20470400000002!3d22.326561!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fcf3fcf5a1eab%3A0x5f6f90da147465aa!2sGenius%20Technology%20-%20IT%20%26%20Software%20Solutions%20Vadodara!5e1!3m2!1sen!2sus!4v1770900535297!5m2!1sen!2sus" 
+              width="100%" 
+              height="450" 
+              style={{ border: 0 }} 
+              allowFullScreen={true}
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ================= CTA ================= */}
       <section className="w-full py-20 border-t border-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 text-center">

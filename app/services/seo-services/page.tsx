@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import TechSlider from "@/components/ui/TechSlider";
 import {
@@ -93,11 +94,14 @@ export default function SeoServicesPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
-              <StatCard label="120%+" desc="Traffic Growth Avg" />
-              <StatCard label="Top 3" desc="Target Rankings" />
-              <StatCard label="White Hat" desc="Ethical Methods" />
-              <StatCard label="ROI Focus" desc="Result Driven" />
+            <div className="animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
+              <Image 
+                src="/images/services/SEO-Services.png" 
+                alt="SEO Services"
+                width={800}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>

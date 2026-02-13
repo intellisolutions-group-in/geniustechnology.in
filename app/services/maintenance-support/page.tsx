@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import TechSlider from "@/components/ui/TechSlider";
 import {
@@ -95,11 +96,14 @@ export default function MaintenanceSupportPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
-              <StatCard label="99.99%" desc="Uptime Commitment" />
-              <StatCard label="Fast" desc="SLA Response" />
-              <StatCard label="Secure" desc="Patched by Default" />
-              <StatCard label="Global" desc="24/7 Support" />
+            <div className="animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
+              <Image 
+                src="/images/services/Maintenance-&-Support.jpg" 
+                alt="Maintenance & Support Services"
+                width={800}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>

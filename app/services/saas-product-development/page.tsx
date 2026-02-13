@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import TechSlider from "@/components/ui/TechSlider";
 import {
@@ -96,11 +97,14 @@ export default function SaaSDevelopmentPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
-              <StatCard label="99.99%" desc="High Availability" />
-              <StatCard label="Sub-Sec" desc="Dashboard Latency" />
-              <StatCard label="Elastic" desc="Resource Scaling" />
-              <StatCard label="ISO 27001" desc="Ready Compliance" />
+            <div className="animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
+              <Image 
+                src="/images/services/SaaS-Product-Development.jpg" 
+                alt="SaaS Product Development Services"
+                width={800}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>

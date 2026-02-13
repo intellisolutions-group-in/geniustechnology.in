@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import TechSlider from "@/components/ui/TechSlider";
 import {
@@ -94,11 +95,14 @@ export default function AppDevelopmentPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
-              <StatCard label="90%+ Retention" desc="User Engagement Focus" />
-              <StatCard label="60fps" desc="Smooth Rendering" />
-              <StatCard label="Ultra Secure" desc="Enterprise Grade" />
-              <StatCard label="Low Latency" desc="Optimized Backends" />
+            <div className="animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
+              <Image 
+                src="/images/services/App-Development.jpg" 
+                alt="App Development Services"
+                width={800}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>

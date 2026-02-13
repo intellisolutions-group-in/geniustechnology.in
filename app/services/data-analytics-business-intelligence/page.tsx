@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import TechSlider from "@/components/ui/TechSlider";
 import {
@@ -107,11 +108,14 @@ export default function DataAnalyticsPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
-              <StatCard label="100%" desc="Data Accuracy" />
-              <StatCard label="Real-Time" desc="Insight Delivery" />
-              <StatCard label="Scalable" desc="Storage Solutions" />
-              <StatCard label="ROI Focus" desc="Value Driven" />
+            <div className="animate-[fadeUp_0.8s_ease-out_0.2s_forwards] opacity-0">
+              <Image 
+                src="/images/services/Data-Analytics-&-BI.jpg" 
+                alt="Data Analytics & Business Intelligence Services"
+                width={800}
+                height={400}
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>
