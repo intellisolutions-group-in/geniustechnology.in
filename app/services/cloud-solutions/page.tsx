@@ -38,8 +38,8 @@ const features = [
     icon: Zap
   },
   {
-    title: "Cloud Security & Compliance",
-    desc: "Implement enterprise-grade security protocols and ensure compliance with global standards like GDPR and HIPAA.",
+    title: "Cloud Security",
+    desc: "Implement enterprise-grade security protocols to protect your cloud infrastructure and data.",
     icon: Lock
   },
   {

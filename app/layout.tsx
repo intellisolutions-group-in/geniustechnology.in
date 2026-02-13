@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 
 import NavigateCursor from "@/components/ui/NavigateCursor";
 import StaticCursor from "@/components/ui/StaticCursor";
+import { generatePageMetadata, generateOrganizationSchema, generateWebsiteSchema } from "@/utils/seo";
+import { PROJECT_VARS } from "@/utils/constants";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -13,22 +15,40 @@ const outfit = Outfit({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Genius Technology - IT Services & Software Development Company",
-  description: "Genius Technology is an IT services and software development company delivering reliable, scalable, and business-focused digital solutions for modern organisations.",
-  icons: {
-    icon: "/images/favicon.png",
-    apple: "/images/favicon.png",
-  },
-};
+// Auto-generated SEO metadata from company data
+export const metadata: Metadata = generatePageMetadata({
+  title: `${PROJECT_VARS.BRAND_NAME} | ${PROJECT_VARS.INDUSTRY}`,
+  description: PROJECT_VARS.DESCRIPTION,
+  keywords: PROJECT_VARS.SEO_KEYWORDS,
+  path: '/',
+});
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Generate structured data schemas
+  const organizationSchema = generateOrganizationSchema();
+  const websiteSchema = generateWebsiteSchema();
+  
   return (
     <html lang="en">
+      <head>
+        {/* Structured Data - Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        {/* Structured Data - Website Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        {/* Preconnect to optimize font loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className={outfit.className}>
         <StaticCursor/>
         <Header />

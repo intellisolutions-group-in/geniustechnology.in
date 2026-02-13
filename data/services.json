@@ -1,0 +1,118 @@
+{
+  "services": [
+    {
+      "id": "web-development",
+      "name": "Web Development",
+      "slug": "web-development",
+      "shortDescription": "Custom, scalable websites and web applications built for performance, security, and long-term growth.",
+      "fullDescription": "We build modern, responsive web applications using cutting-edge technologies like React, Next.js, and Node.js. Our web solutions are designed to scale with your business and deliver exceptional user experiences.",
+      "icon": "Code",
+      "features": [
+        "Custom Web Applications",
+        "E-commerce Platforms",
+        "Progressive Web Apps (PWA)",
+        "API Development & Integration",
+        "Performance Optimization",
+        "Responsive Design"
+      ],
+      "technologies": ["React", "Next.js", "Node.js", "TypeScript", "Tailwind CSS"],
+      "cta": "Start Your Web Project",
+      "ctaLink": "/contact"
+    },
+    {
+      "id": "app-development",
+      "name": "App Development",
+      "slug": "app-development",
+      "shortDescription": "Native and cross-platform mobile applications designed to deliver seamless user experiences.",
+      "fullDescription": "Build powerful mobile applications for iOS and Android with native performance and beautiful interfaces. We specialize in React Native and Flutter for cross-platform development.",
+      "icon": "Smartphone",
+      "features": [
+        "iOS & Android Development",
+        "Cross-Platform Apps",
+        "Native Performance",
+        "App Store Optimization",
+        "Push Notifications",
+        "Offline Functionality"
+      ],
+      "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase"],
+      "cta": "Build Your App",
+      "ctaLink": "/contact"
+    },
+    {
+      "id": "seo-services",
+      "name": "SEO Services",
+      "slug": "seo-services",
+      "shortDescription": "Technical and content-driven SEO strategies to improve visibility, traffic, and search performance.",
+      "fullDescription": "Comprehensive SEO services to improve your search engine rankings, drive organic traffic, and increase conversions. We focus on technical SEO, content optimization, and link building.",
+      "icon": "TrendingUp",
+      "features": [
+        "Technical SEO Audit",
+        "On-Page Optimization",
+        "Content Strategy",
+        "Link Building",
+        "Local SEO",
+        "Performance Monitoring"
+      ],
+      "technologies": ["Google Analytics", "Search Console", "SEMrush", "Ahrefs"],
+      "cta": "Boost Your Rankings",
+      "ctaLink": "/contact"
+    },
+    {
+      "id": "ui-ux-design",
+      "name": "UI/UX Design",
+      "slug": "ui-ux-design",
+      "shortDescription": "User-focused interface and experience design that improves usability and engagement.",
+      "fullDescription": "Create intuitive and beautiful user interfaces that users love. We combine user research, wireframing, prototyping, and visual design to deliver exceptional digital experiences.",
+      "icon": "Palette",
+      "features": [
+        "User Research & Testing",
+        "Wireframing & Prototyping",
+        "Visual Design",
+        "Design Systems",
+        "Usability Testing",
+        "Brand Identity"
+      ],
+      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision", "Principle"],
+      "cta": "Design With Us",
+      "ctaLink": "/contact"
+    },
+    {
+      "id": "cloud-solutions",
+      "name": "Cloud Solutions",
+      "slug": "cloud-solutions",
+      "shortDescription": "Cloud architecture, migration, and optimisation services for secure and scalable infrastructure.",
+      "fullDescription": "Modern cloud infrastructure solutions for businesses of all sizes. We help you migrate to the cloud, optimize costs, and build scalable, secure cloud-native applications.",
+      "icon": "Cloud",
+      "features": [
+        "Cloud Migration",
+        "Infrastructure as Code",
+        "DevOps Automation",
+        "Kubernetes & Containerization",
+        "Cloud Security",
+        "Cost Optimization"
+      ],
+      "technologies": ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"],
+      "cta": "Go Cloud",
+      "ctaLink": "/contact"
+    },
+    {
+      "id": "maintenance-support",
+      "name": "Maintenance & Support",
+      "slug": "maintenance-support",
+      "shortDescription": "Ongoing monitoring, updates, and support to ensure reliability and performance.",
+      "fullDescription": "24/7 technical support and maintenance services to keep your digital solutions running smoothly. We provide proactive monitoring, regular updates, and rapid issue resolution.",
+      "icon": "Settings",
+      "features": [
+        "24/7 Monitoring",
+        "Regular Updates",
+        "Bug Fixes",
+        "Performance Optimization",
+        "Security Patches",
+        "Technical Support"
+      ],
+      "technologies": ["Monitoring Tools", "CI/CD", "Version Control", "Issue Tracking"],
+      "cta": "Get Support",
+      "ctaLink": "/contact"
+    }
+  ]
+}

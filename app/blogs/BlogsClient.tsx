@@ -244,37 +244,6 @@ export default function BlogsClient() {
         </div>
       </section>
 
-      {/* NEWSLETTER */}
-      <section className="w-full py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
-          <div className="bg-[var(--brand-blue)] rounded-2xl p-8 md:p-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('/images/hero-illustration.svg')] opacity-5 bg-cover" />
-            <div className="relative z-10 max-w-2xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-semibold text-white">
-                Stay Updated with Our Latest Insights
-              </h2>
-              <p className="mt-4 text-white/80">
-                Subscribe to our newsletter and get the latest technology trends
-                and best practices delivered to your inbox.
-              </p>
-              <form className="mt-8 flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
-                />
-                <button
-                  type="submit"
-                  className="px-6 py-3 bg-white text-[var(--brand-blue)] font-medium rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="w-full py-20 border-t border-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 text-center">

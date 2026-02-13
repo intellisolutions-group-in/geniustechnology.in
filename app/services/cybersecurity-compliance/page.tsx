@@ -38,8 +38,8 @@ const features = [
     icon: Search
   },
   {
-    title: "Compliance Readiness",
-    desc: "Expert guidance to help you meet global standards like GDPR, HIPAA, SOC2, and ISO 27001.",
+    title: "Security Standards Alignment",
+    desc: "Expert guidance to help you align with recognized security frameworks and best practices.",
     icon: FileCheck
   },
   {

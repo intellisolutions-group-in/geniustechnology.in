@@ -19,7 +19,6 @@ interface Job {
   location: string;
   employmentType: string;
   experience: string;
-  salary: string;
   responsibilities: string[];
   skills: string[];
 }
@@ -29,10 +28,9 @@ const jobs: Job[] = [
     id: 1,
     title: "Frontend Developer",
     department: "Engineering",
-    location: "Remote",
+    location: "Vadodara, India",
     employmentType: "Full-time",
     experience: "2-4 Years",
-    salary: "₹5-12 LPA",
     responsibilities: [
       "Develop responsive web applications using React.js and Next.js",
       "Collaborate with UI/UX designers to implement pixel-perfect designs",
@@ -45,10 +43,9 @@ const jobs: Job[] = [
     id: 2,
     title: "Backend Developer",
     department: "Engineering",
-    location: " Remote",
+    location: "Vadodara, India",
     employmentType: "Full-time",
     experience: "3-5 Years",
-    salary: "₹8-18 LPA",
     responsibilities: [
       "Design and develop scalable server-side applications",
       "Build efficient RESTful APIs and microservices",
@@ -61,10 +58,9 @@ const jobs: Job[] = [
     id: 3,
     title: "UI / UX Designer",
     department: "Design",
-    location: " Remote",
+    location: "Vadodara, India / Hybrid",
     employmentType: "Full-time",
     experience: "2-5 Years",
-    salary: "₹4-10 LPA",
     responsibilities: [
       "Create intuitive user flows and wireframes for web and mobile apps",
       "Design high-fidelity prototypes and visual designs",
@@ -77,10 +73,9 @@ const jobs: Job[] = [
     id: 4,
     title: "Digital Marketing Executive",
     department: "Marketing",
-    location: " Remote",
+    location: "Vadodara, India",
     employmentType: "Full-time",
     experience: "1-3 Years",
-    salary: "₹3-8 LPA",
     responsibilities: [
       "Plan and execute digital marketing campaigns across channels",
       "Manage social media presence and content strategy",
@@ -93,10 +88,9 @@ const jobs: Job[] = [
     id: 5,
     title: "QA Engineer",
     department: "Quality Assurance",
-    location: " Remote",
+    location: "Vadodara, India / Hybrid",
     employmentType: "Full-time",
     experience: "2-4 Years",
-    salary: "₹4-10 LPA",
     responsibilities: [
       "Develop and execute test plans and test cases",
       "Perform manual and automated testing for web applications",
@@ -109,10 +103,9 @@ const jobs: Job[] = [
     id: 6,
     title: "Full Stack Developer",
     department: "Engineering",
-    location: " Remote",
+    location: "Vadodara, India",
     employmentType: "Full-time",
     experience: "3-6 Years",
-    salary: "₹10-20 LPA",
     responsibilities: [
       "Build end-to-end web applications from concept to deployment",
       "Develop both frontend and backend components",

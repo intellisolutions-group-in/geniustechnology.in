@@ -1,0 +1,64 @@
+{
+  "faqs": [
+    {
+      "id": "faq-1",
+      "category": "General",
+      "question": "What services does Genius Technology provide?",
+      "answer": "We provide end-to-end IT services including web development, mobile app development, UI/UX design, cloud solutions, SEO services, and ongoing maintenance and support. Our solutions are tailored to match the scale, goals, and technical needs of each organisation."
+    },
+    {
+      "id": "faq-2",
+      "category": "Client Types",
+      "question": "Do you work with startups or only large enterprises?",
+      "answer": "We work with startups, growing businesses, and established enterprises. Our solutions are designed to scale with your business, whether you're launching your first product or modernising existing enterprise systems."
+    },
+    {
+      "id": "faq-3",
+      "category": "Process",
+      "question": "How do you ensure project quality and timely delivery?",
+      "answer": "We follow structured development processes with clear milestones, regular communication, and progress reviews. Our approach includes comprehensive testing, code reviews, and quality assurance at every stage to ensure reliable delivery within agreed timelines."
+    },
+    {
+      "id": "faq-4",
+      "category": "Support",
+      "question": "Do you provide post-launch support and maintenance?",
+      "answer": "Yes, we offer 24/7 ongoing maintenance, monitoring, updates, and technical support to ensure long-term reliability and performance after launch. Our support packages include proactive monitoring, regular updates, security patches, and rapid issue resolution."
+    },
+    {
+      "id": "faq-5",
+      "category": "Technology",
+      "question": "What technologies do you specialize in?",
+      "answer": "We specialize in modern web technologies including React, Next.js, Node.js, TypeScript for web development; React Native and Flutter for mobile apps; AWS, Azure, and Google Cloud for cloud solutions; and comprehensive DevOps and CI/CD practices."
+    },
+    {
+      "id": "faq-6",
+      "category": "Timeline",
+      "question": "How long does a typical project take?",
+      "answer": "Project timelines vary based on scope and complexity. A standard website typically takes 4-6 weeks, mobile apps 8-12 weeks, and enterprise solutions 12-24 weeks. We provide detailed timeline estimates during the initial consultation phase."
+    },
+    {
+      "id": "faq-7",
+      "category": "Pricing",
+      "question": "How do you structure your pricing?",
+      "answer": "We offer flexible pricing models including fixed-price projects, time and materials, and retainer-based arrangements. Pricing depends on project scope, complexity, timeline, and required resources. We provide transparent quotes with no hidden costs."
+    },
+    {
+      "id": "faq-8",
+      "category": "Communication",
+      "question": "What is your communication process during projects?",
+      "answer": "We maintain clear, regular communication through dedicated project managers, weekly status updates, demo sessions, and access to project management tools. You'll have direct access to the development team and regular progress reviews."
+    },
+    {
+      "id": "faq-9",
+      "category": "Security",
+      "question": "How do you handle data security and confidentiality?",
+      "answer": "We follow industry-standard security practices including NDA agreements, secure development practices, data encryption, and regular security audits. Your data and intellectual property are protected at all times."
+    },
+    {
+      "id": "faq-10",
+      "category": "Getting Started",
+      "question": "How do I get started with a project?",
+      "answer": "Simply contact us through our website or email. We'll schedule an initial consultation to understand your requirements, provide a detailed proposal with timeline and pricing, and once approved, we'll kick off the project with a comprehensive planning phase."
+    }
+  ]
+}

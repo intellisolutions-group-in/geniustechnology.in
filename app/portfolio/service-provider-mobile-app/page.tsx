@@ -57,7 +57,7 @@ We worked closely with real service providers to design every feature, ensuring 
   outcomes: [
     "Real-time notifications reducing missed appointments by 80%",
     "Intuitive mobile UX with 4.8-star app store rating",
-    "Secure backend integration with PCI compliance",
+      "Secure backend integration with payment processing",
     "Offline-first architecture for reliable performance",
     "50,000+ downloads",
     "40% increase in daily appointments handled",

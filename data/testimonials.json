@@ -1,0 +1,64 @@
+{
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "name": "Arjun Malhotra",
+      "role": "Chief Technology Officer",
+      "company": "",
+      "image": "/images/testimonials/client-1.jpg",
+      "rating": 5,
+      "quote": "Genius Technology helped us build a scalable digital platform that significantly improved system performance and reliability. Their approach was structured, transparent, and highly professional.",
+      "projectType": "Enterprise Web Platform"
+    },
+    {
+      "id": "testimonial-2",
+      "name": "Priya Sharma",
+      "role": "Marketing Director",
+      "company": "",
+      "image": "/images/testimonials/client-2.jpg",
+      "rating": 5,
+      "quote": "The team understood our business goals clearly and delivered solutions that improved both user experience and digital visibility. Communication throughout the project was excellent.",
+      "projectType": "Digital Marketing & SEO"
+    },
+    {
+      "id": "testimonial-3",
+      "name": "Rahul Verma",
+      "role": "Operations Manager",
+      "company": "",
+      "image": "/images/testimonials/client-3.jpg",
+      "rating": 5,
+      "quote": "Their development process was well organised, and the final solution aligned perfectly with our operational requirements. We appreciated their attention to detail and reliability.",
+      "projectType": "Custom Software Development"
+    },
+    {
+      "id": "testimonial-4",
+      "name": "Ananya Gupta",
+      "role": "Product Manager",
+      "company": "",
+      "image": "/images/testimonials/client-4.jpg",
+      "rating": 5,
+      "quote": "Working with Genius Technology was smooth and efficient. They translated complex requirements into a clean, user-friendly product that our customers love using.",
+      "projectType": "SaaS Product Development"
+    },
+    {
+      "id": "testimonial-5",
+      "name": "Vikram Singh",
+      "role": "Technical Lead",
+      "company": "",
+      "image": "/images/testimonials/client-5.jpg",
+      "rating": 5,
+      "quote": "The technical expertise of the team stood out. From architecture decisions to implementation, everything was handled with clarity and precision.",
+      "projectType": "Cloud Migration & Architecture"
+    },
+    {
+      "id": "testimonial-6",
+      "name": "Neha Patel",
+      "role": "Business Development Head",
+      "company": "",
+      "image": "/images/testimonials/client-6.jpg",
+      "rating": 5,
+      "quote": "Their solutions helped streamline our processes and improve overall efficiency. We value their long-term support and collaborative approach.",
+      "projectType": "Business Process Automation"
+    }
+  ]
+}

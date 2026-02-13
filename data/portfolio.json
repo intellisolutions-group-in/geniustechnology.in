@@ -1,0 +1,105 @@
+{
+  "portfolio": [
+    {
+      "id": "portfolio-1",
+      "title": "Enterprise Web Platform",
+      "slug": "enterprise-resource-system",
+      "client": "",
+      "industry": "Technology",
+      "year": "2023",
+      "category": "Web Development",
+      "thumbnail": "/images/portfolio/enterprise-platform.jpg",
+      "shortDescription": "Scalable web platform to support increasing traffic and complex business workflows.",
+      "fullDescription": "Designed and developed a modular, performance-optimised web application with a scalable architecture to handle high traffic and complex business operations.",
+      "challenge": "The client needed a scalable web platform to support increasing traffic and complex business workflows with high reliability and performance requirements.",
+      "solution": "We designed and developed a modular web application using Next.js and Node.js, implementing microservices architecture for scalability and performance optimization.",
+      "results": [
+        "300% improvement in page load times",
+        "99.9% uptime reliability",
+        "Scaled to handle 100K+ concurrent users",
+        "Reduced operational costs by 40%"
+      ],
+      "technologies": ["React", "Next.js", "Node.js", "PostgreSQL", "AWS", "Docker"],
+      "features": [
+        "Microservices Architecture",
+        "Real-time Data Processing",
+        "Advanced Analytics Dashboard",
+        "Multi-tenant System",
+        "API Gateway Integration"
+      ],
+      "images": [
+        "/images/portfolio/enterprise-1.jpg",
+        "/images/portfolio/enterprise-2.jpg",
+        "/images/portfolio/enterprise-3.jpg"
+      ]
+    },
+    {
+      "id": "portfolio-2",
+      "title": "Mobile Application for Service Management",
+      "slug": "service-provider-mobile-app",
+      "client": "",
+      "industry": "Logistics",
+      "year": "2023",
+      "category": "App Development",
+      "thumbnail": "/images/portfolio/mobile-app.jpg",
+      "shortDescription": "Cross-platform mobile application to streamline service requests and improve response times.",
+      "fullDescription": "Built a comprehensive mobile solution that streamlined manual service processes, improved team visibility, and reduced response times by 60%.",
+      "challenge": "Manual service requests caused delays and lack of visibility across teams, leading to inefficient operations and customer dissatisfaction.",
+      "solution": "We built a cross-platform mobile application using React Native with real-time notifications, GPS tracking, and integrated communication features.",
+      "results": [
+        "60% reduction in response times",
+        "95% user satisfaction rate",
+        "50% increase in daily service requests handled",
+        "Real-time team coordination"
+      ],
+      "technologies": ["React Native", "Firebase", "Node.js", "MongoDB", "REST APIs"],
+      "features": [
+        "Real-time Notifications",
+        "GPS Tracking",
+        "In-app Chat",
+        "Offline Mode",
+        "Digital Signatures",
+        "Analytics Dashboard"
+      ],
+      "images": [
+        "/images/portfolio/mobile-1.jpg",
+        "/images/portfolio/mobile-2.jpg",
+        "/images/portfolio/mobile-3.jpg"
+      ]
+    },
+    {
+      "id": "portfolio-3",
+      "title": "Customer Engagement Platform",
+      "slug": "customer-engagement-platform",
+      "client": "",
+      "industry": "E-commerce",
+      "year": "2024",
+      "category": "UI/UX Design",
+      "thumbnail": "/images/portfolio/engagement-platform.jpg",
+      "shortDescription": "UI/UX redesign for SaaS product to improve user navigation and task completion.",
+      "fullDescription": "Complete redesign of customer-facing platform with focus on user experience, resulting in significant improvements in engagement and conversion rates.",
+      "challenge": "Users struggled with navigation and task completion due to a complex interface, leading to high bounce rates and low conversion.",
+      "solution": "We conducted comprehensive user research and redesigned the entire user experience with simplified flows, modern UI patterns, and intuitive navigation.",
+      "results": [
+        "45% increase in user engagement",
+        "35% improvement in conversion rates",
+        "70% reduction in support tickets",
+        "85% positive user feedback"
+      ],
+      "technologies": ["Figma", "React", "TypeScript", "Tailwind CSS", "UX Research"],
+      "features": [
+        "User Research & Testing",
+        "Interactive Prototypes",
+        "Design System",
+        "Responsive Design",
+        "Accessibility Compliance",
+        "Performance Optimization"
+      ],
+      "images": [
+        "/images/portfolio/engagement-1.jpg",
+        "/images/portfolio/engagement-2.jpg",
+        "/images/portfolio/engagement-3.jpg"
+      ]
+    }
+  ]
+}

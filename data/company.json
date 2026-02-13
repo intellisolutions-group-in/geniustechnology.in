@@ -1,0 +1,68 @@
+{
+  "domain": "geniustechnology.in",
+  "domainRegistered": "2018-01-11",
+  "industry": "IT Services & Software Development",
+  "brandName": "Genius Technology",
+  "tagline": "Take the complexity out of digital transformation",
+  "primaryContact": "info@geniustechnology.in",
+  "establishedYear": "2016",
+  "businessType": "Corporate",
+  "targetAudience": "B2B, Enterprise, Growing Businesses, Startups",
+  "targetCountries": ["IN"],
+  "companySize": "Medium",
+  "description": "Genius Technology is an IT services and software development company focused on delivering practical, scalable, and reliable digital solutions for modern businesses. We work closely with organisations to understand their challenges and design technology that supports long-term growth and operational efficiency.",
+  "mission": "Enabling organisations to design, develop, and manage digital solutions that improve operational efficiency and deliver meaningful user experiences.",
+  "values": [
+    "Client-Focused Approach",
+    "Scalable Architecture",
+    "Reliable Delivery",
+    "Long-Term Support",
+    "Business-First Approach",
+    "Clear Communication & Transparency"
+  ],
+  "metrics": {
+    "projectsDelivered": "150",
+    "activeClients": "85",
+    "yearsExperience": "10",
+    "supportAvailability": "24/7"
+  },
+  "brandColors": {
+    "primary": "#2563eb",
+    "secondary": "#1e40af",
+    "accent": "#3b82f6",
+    "neutral": {
+      "50": "#f9fafb",
+      "100": "#f3f4f6",
+      "200": "#e5e7eb",
+      "300": "#d1d5db",
+      "400": "#9ca3af",
+      "500": "#6b7280",
+      "600": "#4b5563",
+      "700": "#374151",
+      "800": "#1f2937",
+      "900": "#111827"
+    }
+  },
+  "seoKeywords": [
+    "IT services India",
+    "software development company",
+    "web development services",
+    "mobile app development",
+    "cloud solutions",
+    "digital transformation",
+    "enterprise software development",
+    "custom software solutions",
+    "UI UX design services",
+    "SEO optimization services"
+  ],
+  "additionalFeatures": {
+    "newsletter": false,
+    "testimonials": true,
+    "faq": true,
+    "blog": false,
+    "portfolio": true,
+    "teamPage": false,
+    "chatWidget": false,
+    "multiLanguage": false
+  }
+}
