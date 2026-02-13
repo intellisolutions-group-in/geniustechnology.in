@@ -16,12 +16,17 @@ const outfit = Outfit({
 });
 
 // Auto-generated SEO metadata from company data
-export const metadata: Metadata = generatePageMetadata({
-  title: `${PROJECT_VARS.BRAND_NAME} | ${PROJECT_VARS.INDUSTRY}`,
-  description: PROJECT_VARS.DESCRIPTION,
-  keywords: PROJECT_VARS.SEO_KEYWORDS,
-  path: '/',
-});
+export const metadata: Metadata = {
+  ...generatePageMetadata({
+    title: `${PROJECT_VARS.BRAND_NAME} | ${PROJECT_VARS.INDUSTRY}`,
+    description: PROJECT_VARS.DESCRIPTION,
+    keywords: PROJECT_VARS.SEO_KEYWORDS,
+    path: '/',
+  }),
+  icons: {
+    icon: '/images/favicon.png',
+  },
+};
 
 export default function RootLayout({
   children,
