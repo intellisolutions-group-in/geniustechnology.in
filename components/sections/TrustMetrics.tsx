@@ -14,8 +14,8 @@ const metrics = [
     label: "Active Clients",
   },
   {
-    value: 5,
-    suffix: "+",
+    value: 8,
+    suffix: "",
     label: "Years of Industry Experience",
   },
   {

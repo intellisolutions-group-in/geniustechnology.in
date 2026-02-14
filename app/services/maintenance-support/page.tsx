@@ -89,7 +89,7 @@ export default function MaintenanceSupportPage() {
               </p>
 
               <div className="mt-10 space-y-4">
-                <BenefitItem text="Guaranteed uptime and incident response SLAs." />
+                <BenefitItem text="High uptime target with incident response protocols." />
                 <BenefitItem text="Proactive threat detection and security hardening." />
                 <BenefitItem text="Consistent performance tuning for fast user experiences." />
                 <BenefitItem text="Dedicated technical team that understands your codebase." />

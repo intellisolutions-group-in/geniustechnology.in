@@ -29,42 +29,42 @@ export default function TestimonialsPage() {
             <TestimonialCard
               name="Amit Patel"
               role="Founder"
-              company="LogiCore Solutions"
+              company=""
               quote="Genius Technology delivered exactly what we needed. Clear communication, strong technical understanding, and reliable delivery throughout the project."
             />
 
             <TestimonialCard
               name="Neha Sharma"
               role="Product Manager"
-              company="HealthSync Platform"
+              company=""
               quote="Their team took the time to understand our requirements and built a solution that scaled smoothly as our user base grew."
             />
 
             <TestimonialCard
               name="Rahul Mehta"
               role="Operations Head"
-              company="RetailFlow Systems"
+              company=""
               quote="What stood out most was their structured approach and attention to long-term maintainability. Highly recommended."
             />
 
             <TestimonialCard
               name="Priya Desai"
               role="Marketing Lead"
-              company="BrandNest"
+              company=""
               quote="From UI/UX to performance optimisation, the experience was seamless. We appreciated their transparency and responsiveness."
             />
 
             <TestimonialCard
               name="Sandeep Kulkarni"
-              role="CTO"
-              company="FinEdge Tech"
+              role="Chief Technology Officer"
+              company=""
               quote="A dependable technology partner who focuses on clean architecture and scalable systems rather than shortcuts."
             />
 
             <TestimonialCard
               name="Karan Shah"
               role="Co-Founder"
-              company="EduStack"
+              company=""
               quote="Working with Genius Technology felt like an extension of our internal team. Professional, reliable, and detail-oriented."
             />
           </div>

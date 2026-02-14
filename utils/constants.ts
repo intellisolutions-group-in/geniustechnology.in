@@ -6,7 +6,7 @@ export const PROJECT_VARS = {
   BRAND_NAME: "Genius Technology",
   DOMAIN: "geniustechnology.in",
   INDUSTRY: "IT Services & Software Development",
-  ESTABLISHED_YEAR: "2016",
+  ESTABLISHED_YEAR: "2018",
   DOMAIN_REGISTERED: "2018-01-11",
   
   // Contact Information
@@ -56,7 +56,7 @@ export const PROJECT_VARS = {
   METRICS: {
     PROJECTS_DELIVERED: "150+",
     ACTIVE_CLIENTS: "85+",
-    YEARS_EXPERIENCE: "10+",
+    YEARS_EXPERIENCE: "8",
     SUPPORT_AVAILABILITY: "24/7"
   },
   
