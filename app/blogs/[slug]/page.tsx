@@ -523,29 +523,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </p>
 
           <div className="flex flex-wrap items-center gap-6 mt-8 pt-6 border-t border-white/20">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                <User className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <p className="text-white font-medium">{post.author}</p>
-                <p className="text-white/70 text-sm">{post.authorRole}</p>
-              </div>
-            </div>
-            <div className="h-8 w-px bg-white/20" />
             <div className="flex items-center gap-2 text-white/80">
               <Calendar className="w-4 h-4" />
               {post.date}
-            </div>
-            <div className="flex items-center gap-4 ml-auto">
-              <button className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm transition-colors">
-                <Share2 className="w-4 h-4" />
-                Share
-              </button>
-              <button className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm transition-colors">
-                <Bookmark className="w-4 h-4" />
-                Save
-              </button>
             </div>
           </div>
         </div>
@@ -577,23 +557,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <span className="px-4 py-2 bg-gray-100 text-gray-600 text-sm rounded-full hover:bg-gray-200 transition-colors cursor-pointer">
                 Digital Transformation
               </span>
-            </div>
-          </div>
-
-          {/* AUTHOR BOX */}
-          <div className="mt-10 p-6 bg-gray-50 rounded-2xl">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 rounded-full bg-[var(--brand-blue)] flex items-center justify-center flex-shrink-0">
-                <User className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-black">{post.author}</h4>
-                <p className="text-[var(--brand-blue)] text-sm mb-3">{post.authorRole}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Expert in {post.category} with extensive experience in enterprise software development. 
-                  Passionate about sharing knowledge and helping organizations leverage technology for business growth.
-                </p>
-              </div>
             </div>
           </div>
         </div>

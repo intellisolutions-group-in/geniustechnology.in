@@ -13,12 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services',
     '/portfolio',
     '/contact',
-    '/faq',
-    '/testimonials',
-    '/why-choose-us',
-    '/our-process',
-    '/privacy',
-    '/terms',
+    '/careers',
+    '/blogs',
   ].map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -27,15 +23,63 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Service pages
-  const serviceRoutes = PROJECT_VARS.KEY_SERVICES.map(service => {
-    const slug = service.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '');
-    return {
-      url: `${baseUrl}/services/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    };
-  });
+  const services = [
+    'web-development',
+    'app-development',
+    'custom-software-development',
+    'saas-product-development',
+    'api-development',
+    'cloud-solutions',
+    'devops-services',
+    'seo-services',
+    'digital-marketing',
+    'data-analytics-business-intelligence',
+    'cybersecurity-compliance',
+    'ui-ux-design',
+    'software-consulting',
+    'erp-solutions',
+    'system-integration',
+    'ai-automation-solutions',
+    'maintenance-support',
+  ];
 
-  return [...routes, ...serviceRoutes];
+  const serviceRoutes = services.map(service => ({
+    url: `${baseUrl}/services/${service}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  // Portfolio pages
+  const portfolioPages = [
+    'enterprise-resource-system',
+    'customer-engagement-platform',
+    'service-provider-mobile-app',
+  ];
+
+  const portfolioRoutes = portfolioPages.map(page => ({
+    url: `${baseUrl}/portfolio/${page}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  // Blog pages
+  const blogPosts = [
+    'future-ai-enterprise-software-development',
+    'cloud-migration-strategies-legacy-systems',
+    'cybersecurity-best-practices-modern-web-applications',
+    'microservices-architecture-benefits-implementation-guide',
+    'digital-transformation-trends-2025',
+    'optimizing-react-performance-tips-techniques',
+  ];
+
+  const blogRoutes = blogPosts.map(post => ({
+    url: `${baseUrl}/blogs/${post}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }));
+
+  return [...routes, ...serviceRoutes, ...portfolioRoutes, ...blogRoutes];
 }

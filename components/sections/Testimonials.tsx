@@ -149,9 +149,6 @@ const TestimonialCard = ({
         <p className="text-sm font-semibold text-black">
           {testimonial.name}
         </p>
-        <p className="text-xs text-gray-500">
-          {testimonial.role}
-        </p>
       </div>
     </div>
   );

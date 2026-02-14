@@ -141,6 +141,12 @@ const serviceCategories = [
         icon: Cpu,
         href: "/services/ai-automation-solutions",
       },
+      {
+        title: "Maintenance & Support",
+        description: "Ongoing monitoring, updates, and support to ensure reliability and performance of your systems.",
+        icon: ShieldCheck,
+        href: "/services/maintenance-support",
+      },
     ]
   }
 ];

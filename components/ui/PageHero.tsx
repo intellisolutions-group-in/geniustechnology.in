@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ArrowRight, Sparkles, ShieldCheck, Zap, Globe } from "lucide-react";
 
 interface PageHeroProps {
@@ -50,13 +51,19 @@ const PageHero: React.FC<PageHeroProps> = ({ category, title, description }) => 
               </p>
 
               <div className="pt-6 animate-[fadeUp_0.8s_ease-out_0.3s_forwards] opacity-0 flex flex-wrap gap-4 justify-start">
-                <button className="px-10 py-4 rounded-full bg-black text-white font-semibold text-sm hover:bg-gray-900 transition-all flex items-center gap-2 group shadow-xl shadow-black/10 hover:-translate-y-1">
+                <Link
+                  href="/contact"
+                  className="px-10 py-4 rounded-full bg-black text-white font-semibold text-sm hover:bg-gray-900 transition-all flex items-center gap-2 group shadow-xl shadow-black/10 hover:-translate-y-1"
+                >
                   Get Started
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="px-10 py-4 rounded-full bg-white border border-black/10 text-black font-semibold text-sm hover:bg-gray-50 transition-all shadow-sm hover:-translate-y-1">
+                </Link>
+                <Link
+                  href="/portfolio"
+                  className="px-10 py-4 rounded-full bg-white border border-black/10 text-black font-semibold text-sm hover:bg-gray-50 transition-all shadow-sm hover:-translate-y-1"
+                >
                   Our Portfolio
-                </button>
+                </Link>
               </div>
             </div>
           </div>

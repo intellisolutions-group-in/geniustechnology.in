@@ -163,19 +163,15 @@ export default function ServiceProviderMobileAppPage() {
   return (
     <main className="w-full bg-white">
       {/* ================= HERO ================= */}
-      <section className="w-full">
-        {/* Header Banner */}
-        <div className="relative h-[45vh] sm:h-[55vh] w-full overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-blue)] to-[#0088cc] animate-gradient-xy" />
-          <div className="absolute inset-0 bg-black/20" />
+      <section className="w-full bg-gradient-to-br from-[var(--brand-blue)] to-[#0088cc] relative overflow-hidden">
+        {/* Animated Watermark Icon */}
+        <div className={`absolute bottom-0 right-0 opacity-10 transition-all duration-1000 ${isLoaded ? "translate-y-0 opacity-10" : "translate-y-full opacity-0"}`}>
+          <project.icon className="w-80 h-80 sm:w-96 sm:h-96 text-white" />
+        </div>
 
-          {/* Watermark Icon */}
-          <div className={`absolute -bottom-4 -right-4 opacity-20 transition-all duration-1000 ${isLoaded ? "translate-y-0 opacity-20" : "translate-y-full opacity-0"}`}>
-            <project.icon className="w-80 h-80 sm:w-96 sm:h-96 text-white" />
-          </div>
-
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-12 sm:py-16 relative z-10">
           {/* Back Button */}
-          <div className={`absolute top-6 left-6 z-10 transition-all duration-500 ${isLoaded ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}>
+          <div className={`transition-all duration-500 mb-8 ${isLoaded ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}>
             <Link
               href="/portfolio"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors"
@@ -186,39 +182,37 @@ export default function ServiceProviderMobileAppPage() {
           </div>
 
           {/* Category Badge */}
-          <div className={`absolute bottom-6 left-6 sm:left-16 transition-all duration-700 delay-300 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium animate-fadeUp">
+          <div className={`transition-all duration-700 delay-200 mb-6 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium">
               <project.icon className="w-4 h-4" />
               {project.category}
             </span>
           </div>
-        </div>
 
-        {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-12 sm:py-16">
           {/* Title */}
-          <ScrollReveal>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black">
-              {project.title}
-            </h1>
-          </ScrollReveal>
+          <h1 className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 transition-all duration-700 delay-300 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
+            {project.title}
+          </h1>
 
           {/* Project Details */}
-          <ScrollReveal delay={100}>
-            <div className="flex flex-wrap gap-4 mt-8">
-              {project.projectDetails.map((detail, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
-                >
-                  <detail.icon className="w-4 h-4 text-[var(--brand-blue)]" />
-                  <span className="text-sm text-gray-600">{detail.label}:</span>
-                  <span className="text-sm font-medium text-black">{detail.value}</span>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
+          <div className={`flex flex-wrap gap-4 transition-all duration-700 delay-400 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
+            {project.projectDetails.map((detail, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm text-white text-sm"
+              >
+                <detail.icon className="w-4 h-4" />
+                <span className="font-medium">{detail.label}:</span>
+                <span>{detail.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      {/* ================= CONTENT SECTIONS ================= */}
+      <section className="w-full bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-12 sm:py-16">
           {/* Metrics */}
           <ScrollReveal delay={200}>
             <div className="flex flex-wrap gap-4 mt-8">

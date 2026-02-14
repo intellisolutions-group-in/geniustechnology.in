@@ -4,19 +4,10 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import PageHero from "@/components/ui/PageHero";
 import {
-  Briefcase,
   Globe,
   Smartphone,
-  Code,
-  Cloud,
-  Shield,
-  Database,
   Layers,
-  X,
   CheckCircle2,
-  ArrowRight,
-  Cpu,
-  Lock,
   Zap,
   Globe2,
   Users,
@@ -106,20 +97,6 @@ const projects = [
 /* ================= PAGE ================= */
 
 export default function PortfolioClient() {
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
-
-  useEffect(() => {
-    // Prevent body scroll when modal is open
-    if (selectedProject) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [selectedProject]);
-
   return (
     <main className="w-full bg-white">
 
@@ -135,10 +112,7 @@ export default function PortfolioClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 space-y-12">
           {projects.map((project, index) => (
             <ScrollItem key={index} delay={index * 140}>
-              <PortfolioCard
-                {...project}
-                onClick={() => setSelectedProject(project)}
-              />
+              <PortfolioCard {...project} />
             </ScrollItem>
           ))}
         </div>
@@ -166,14 +140,6 @@ export default function PortfolioClient() {
           </div>
         </div>
       </section>
-
-      {/* ================= PROJECT MODAL ================= */}
-      {selectedProject && (
-        <ProjectModal
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
-        />
-      )}
 
     </main>
   );
@@ -242,7 +208,6 @@ const PortfolioCard = ({
   href,
   icon: Icon,
   iconColor,
-  onClick,
 }: {
   title: string;
   category: string;
@@ -251,7 +216,6 @@ const PortfolioCard = ({
   href: string;
   icon: React.ComponentType<{ className?: string }>;
   iconColor: string;
-  onClick?: () => void;
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -265,7 +229,7 @@ const PortfolioCard = ({
   };
 
   return (
-    <div onClick={onClick}>
+    <Link href={href}>
       <div
         ref={cardRef}
         onMouseMove={handleMouseMove}
@@ -331,243 +295,6 @@ const PortfolioCard = ({
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
-
-/* ================= PROJECT MODAL ================= */
-function ProjectModal({ project, onClose }: { project: typeof projects[0]; onClose: () => void }) {
-  const modalRef = useRef<HTMLDivElement>(null);
-  const [isClosing, setIsClosing] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") handleClose();
-    };
-    window.addEventListener("keydown", handleEscape);
-
-    // Trigger visible state for entrance animation
-    const timer = setTimeout(() => setIsVisible(true), 50);
-
-    return () => {
-      window.removeEventListener("keydown", handleEscape);
-      clearTimeout(timer);
-    };
-  }, []);
-
-  const handleClose = () => {
-    setIsVisible(false);
-    setTimeout(() => {
-      onClose();
-      setIsClosing(false);
-    }, 300);
-  };
-
-  return (
-    <div
-      className={`
-        fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8
-        transition-opacity duration-300
-        ${isVisible && !isClosing ? "opacity-100" : "opacity-0"}
-      `}
-    >
-      {/* Backdrop with scale animation */}
-      <div
-        className={`
-          fixed inset-0 bg-black/60 backdrop-blur-sm
-          transition-all duration-300 ease-out
-          ${isVisible && !isClosing ? "scale-100" : "scale-95"}
-        `}
-        onClick={handleClose}
-      />
-
-      {/* Modal with spring animation */}
-      <div
-        ref={modalRef}
-        className={`
-          relative w-full max-w-4xl max-h-[90vh] overflow-y-auto
-          bg-white rounded-2xl shadow-2xl
-          transition-all duration-500 cubic-bezier(0.34, 1.56, 0.64, 1)
-          ${isVisible && !isClosing
-            ? "opacity-100 scale-100 translate-y-0"
-            : "opacity-0 scale-95 translate-y-8"
-          }
-        `}
-      >
-        {/* Close Button - Sticky while scrolling */}
-        <button
-          onClick={handleClose}
-          className="sticky top-4 left-full -ml-12 z-50 p-3 rounded-full bg-white hover:bg-[var(--brand-blue)] backdrop-blur-sm transition-all duration-300 group shadow-lg"
-        >
-          <X className="w-5 h-5 text-[var(--brand-blue)] group-hover:text-white transition-colors duration-300" />
-        </button>
-
-        {/* Header with gradient and slide animation - Full Height Banner */}
-        <div className={`
-          relative h-[35vh] sm:h-[45vh] w-full
-          transition-all duration-500 delay-100
-          ${isVisible && !isClosing ? "translate-y-0" : "-translate-y-4"}
-        `}>
-          <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-blue)] to-blue-700 animate-gradient-xy" />
-          <div className="absolute inset-0 bg-black/20" />
-
-          {/* Watermark Icon with scale animation - Larger for taller banner */}
-          <div className={`
-            absolute -bottom-4 -right-4 opacity-20
-            transition-all duration-500 delay-200
-            ${isVisible && !isClosing ? "scale-100" : "scale-90"}
-          `}>
-            <project.icon className="w-80 h-80 sm:w-96 sm:h-96 text-white" />
-          </div>
-
-          {/* Category Badge with bounce animation */}
-          <div className={`
-            absolute bottom-6 left-8
-            transition-all duration-500 delay-300
-            ${isVisible && !isClosing ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
-          `}>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium">
-              <project.icon className="w-4 h-4" />
-              {project.category}
-            </span>
-          </div>
-        </div>
-
-        {/* Content with staggered animations */}
-        <div className="p-6 sm:p-10 pt-0">
-          {/* Title */}
-          <h2 className={`
-            text-2xl sm:text-3xl font-bold text-black
-            transition-all duration-500 delay-100
-            ${isVisible && !isClosing ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
-          `}>
-            {project.title}
-          </h2>
-
-          {/* Metrics with staggered animation */}
-          <div className={`
-            flex flex-wrap gap-4 mt-6
-            transition-all duration-500 delay-200
-            ${isVisible && !isClosing ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
-          `}>
-            {project.metrics.map((metric: any, i: any) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-50 border border-gray-100"
-              >
-                <div className="p-2 rounded-lg bg-[var(--brand-blue)]/10">
-                  <metric.icon className="w-5 h-5 text-[var(--brand-blue)]" />
-                </div>
-                <div>
-                  <p className="text-lg font-bold text-black">{metric.value}</p>
-                  <p className="text-xs text-gray-500">{metric.label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Description */}
-          <div className={`
-            mt-8
-            transition-all duration-500 delay-300
-            ${isVisible && !isClosing ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
-          `}>
-            <h3 className="text-lg font-semibold text-black mb-3">Overview</h3>
-            <p className="text-gray-600 leading-relaxed">
-              {project.description}
-            </p>
-          </div>
-
-          {/* Challenge & Solution */}
-          <div className={`
-            grid sm:grid-cols-2 gap-6 mt-8
-            transition-all duration-500 delay-400
-            ${isVisible && !isClosing ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
-          `}>
-            <div className="p-6 rounded-xl bg-red-50 border border-red-100">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="p-2 rounded-lg bg-red-100">
-                  <Shield className="w-5 h-5 text-red-600" />
-                </div>
-                <h4 className="font-semibold text-black">The Challenge</h4>
-              </div>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {project.challenge}
-              </p>
-            </div>
-
-            <div className="p-6 rounded-xl bg-[var(--brand-blue)]/5 border border-[var(--brand-blue)]/20">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="p-2 rounded-lg bg-[var(--brand-blue)]/20">
-                  <CheckCircle2 className="w-5 h-5 text-[var(--brand-blue)]" />
-                </div>
-                <h4 className="font-semibold text-black">Our Solution</h4>
-              </div>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {project.solution}
-              </p>
-            </div>
-          </div>
-
-          {/* Tech Stack */}
-          <div className={`
-            mt-8
-            transition-all duration-500 delay-500
-            ${isVisible && !isClosing ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
-          `}>
-            <h3 className="text-lg font-semibold text-black mb-4">Technologies Used</h3>
-            <div className="flex flex-wrap gap-2">
-              {project.techStack.map((tech: any, i: any) => (
-                <span
-                  key={i}
-                  className="px-3 py-1.5 rounded-full bg-gray-100 text-gray-700 text-sm font-medium"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Outcomes */}
-          <div className={`
-            mt-8
-            transition-all duration-500 delay-600
-            ${isVisible && !isClosing ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
-          `}>
-            <h3 className="text-lg font-semibold text-black mb-4">Key Outcomes</h3>
-            <ul className="space-y-3">
-              {project.outcomes.map((outcome: any, i: any) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[var(--brand-blue)] mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-600">{outcome}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* CTA */}
-          <div className={`
-            mt-10 pt-8 border-t border-gray-100 flex justify-end
-            transition-all duration-500 delay-700
-            ${isVisible && !isClosing ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
-          `}>
-            <button
-              onClick={handleClose}
-              className="px-6 py-3 rounded-lg bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-colors mr-4"
-            >
-              Close
-            </button>
-            <Link
-              href={project.href}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--brand-blue)] text-white font-medium hover:bg-[var(--brand-blue-dark)] transition-colors"
-            >
-              View Full Case Study
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}

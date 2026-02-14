@@ -149,10 +149,6 @@ export default function BlogsClient() {
                     <Clock className="w-4 h-4" />
                     {blogPosts[0].readTime}
                   </div>
-                  <div className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
-                    {blogPosts[0].author}
-                  </div>
                 </div>
                 <div className="mt-8">
                   <Link
@@ -295,10 +291,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
           {post.excerpt}
         </p>
 
-        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-          <span className="text-sm text-gray-500">
-            By <span className="font-medium text-gray-700">{post.author}</span>
-          </span>
+        <div className="flex items-center justify-end pt-4 border-t border-gray-100">
           <span className="flex items-center gap-2 text-[var(--brand-blue)] font-medium text-sm group-hover:gap-3 transition-all">
             Read More
             <ChevronRight className="w-4 h-4" />

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const AboutUs = () => {
@@ -29,7 +30,7 @@ const AboutUs = () => {
   return (
     <section ref={sectionRef} className="w-full bg-white py-20">
       <div className="w-full px-4 sm:px-6 lg:px-16">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT CONTENT */}
           <div>
@@ -64,33 +65,22 @@ const AboutUs = () => {
                 Learn more about us
               </Link>
             </div>
+
+         
           </div>
 
-          {/* RIGHT CONTENT – KEY POINTS */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <AboutCard
-              title="Client-Focused Approach"
-              description="We collaborate closely with businesses to deliver solutions aligned with real operational needs."
-              animate={visible}
-              from="left"
-            />
-            <AboutCard
-              title="Scalable Architecture"
-              description="Our solutions are designed to grow with your business and adapt to future requirements."
-              animate={visible}
-              from="bottom"
-            />
-            <AboutCard
-              title="Reliable Delivery"
-              description="We follow structured processes to ensure quality, stability, and predictable outcomes."
-              animate={visible}
-              from="right"
-            />
-            <AboutCard
-              title="Long-Term Support"
-              description="Beyond delivery, we provide ongoing maintenance and optimisation to ensure lasting value."
-              animate={visible}
-              from="top"
+          {/* RIGHT CONTENT – IMAGE */}
+          <div className={`
+            relative w-full h-[500px] rounded-2xl overflow-hidden shadow-xl
+            transition-all duration-1000 ease-out
+            ${visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}
+          `}>
+            <Image
+              src="/images/about/about.webp"
+              alt="About Genius Technology"
+              fill
+              className="object-cover"
+              priority
             />
           </div>
 
