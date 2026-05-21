@@ -21,29 +21,13 @@ const Hero = () => {
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
-            <span className="text-[var(--brand-blue)]">Fast, </span>
-            <span className="text-black">Scalable </span>
-            <span className="text-black">Reliable </span>
-            <span className="text-[var(--brand-blue)]">
-              Digital Solutions
-            </span>
+            <span className="text-[var(--brand-blue)]">Genius Technology </span>
+            <span className="text-black">– IT Solutions</span>
           </h1>
 
           {/* Description */}
           <p className="mt-6 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            Modern businesses expect technology to be intuitive, dependable, and
-            easy to scale. Whether it's building a new web platform, launching a
-            mobile application, integrating cloud infrastructure, or optimising
-            digital performance, these processes should be seamless and efficient.
-          </p>
-
-          <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            That's where <strong>Genius Technology</strong> comes in — enabling
-            organisations to design, develop, and manage digital solutions that
-            improve operational efficiency and deliver meaningful user
-            experiences. From strategy to execution, we help businesses move
-            faster, reduce complexity, and achieve long-term growth through
-            well-engineered technology solutions.
+            Genius Technology provides IT Solutions with operations in India. This is the official website for brand verification and contact information.
           </p>
 
           {/* CTAs */}

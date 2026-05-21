@@ -162,8 +162,8 @@ export const calculateFoundationYear = (domainYear: number, industry: string): n
 
 // Export metadata for SEO
 export const SITE_METADATA = {
-  title: `${PROJECT_VARS.BRAND_NAME} | ${PROJECT_VARS.INDUSTRY}`,
-  description: PROJECT_VARS.DESCRIPTION,
+  title: "Genius Technology | Official Website | IT Solutions in India",
+  description: "Genius Technology is the official website for IT Solutions. Operating in India. Visit our About and Contact pages for verification and business details.",
   keywords: PROJECT_VARS.SEO_KEYWORDS.join(", "),
   author: PROJECT_VARS.BRAND_NAME,
   siteUrl: `https://${PROJECT_VARS.DOMAIN}`,

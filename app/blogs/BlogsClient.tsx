@@ -118,7 +118,7 @@ export default function BlogsClient() {
       {/* HERO */}
       <PageHero
         category="Our Blog"
-        title="Insights & Perspectives |on Technology"
+        title="Genius Technology Blogs & Insights"
         description="Stay informed with the latest trends, best practices, and expert insights from our team of technology professionals."
       />
 

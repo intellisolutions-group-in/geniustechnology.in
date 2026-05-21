@@ -32,7 +32,7 @@ export default function AboutPage() {
       {/* ================= HERO ================= */}
       <PageHero
         category="About Us"
-        title="Building Reliable Digital Solutions |That Support Long-Term Business Growth"
+        title="About Genius Technology – Official IT Partner"
         description="Genius Technology is an IT services and software development company focused on helping businesses design, build, and scale digital solutions that are practical, secure, and future-ready."
       />
 

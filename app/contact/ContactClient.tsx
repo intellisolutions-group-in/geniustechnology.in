@@ -29,7 +29,7 @@ export default function ContactClient() {
       {/* ================= HERO ================= */}
       <PageHero
         category="Contact Us"
-        title="Let's Talk About |Your Next Digital Project"
+        title="Get in Touch with Genius Technology"
         description="Whether you are planning a new product, improving an existing system, or looking for a reliable technology partner — we're here to help."
       />
 

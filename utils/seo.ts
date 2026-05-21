@@ -28,9 +28,7 @@ export function generatePageMetadata({
   publishedTime,
   modifiedTime,
 }: PageSEOProps): Metadata {
-  const pageTitle = title 
-    ? `${title} | ${PROJECT_VARS.BRAND_NAME}` 
-    : SITE_METADATA.title;
+  const pageTitle = title || SITE_METADATA.title;
   
   const pageDescription = description || SITE_METADATA.description;
   const pageKeywords = [...PROJECT_VARS.SEO_KEYWORDS, ...keywords].join(', ');
@@ -116,6 +114,10 @@ export function generateOrganizationSchema() {
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'IN',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
     },
     contactPoint: {
       '@type': 'ContactPoint',

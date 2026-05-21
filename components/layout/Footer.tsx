@@ -98,8 +98,11 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800 py-6 px-4 sm:px-6 lg:px-16 flex justify-between items-center text-sm text-gray-500">
-        <span>© {PROJECT_VARS.ESTABLISHED_YEAR} - {new Date().getFullYear()} {PROJECT_VARS.BRAND_NAME}. All rights reserved.</span>
+      <div className="border-t border-gray-800 py-6 px-4 sm:px-6 lg:px-16 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-4">
+        <div className="flex flex-col md:flex-row items-center gap-4">
+          <span>© {PROJECT_VARS.ESTABLISHED_YEAR} - {new Date().getFullYear()} {PROJECT_VARS.BRAND_NAME} | India. All rights reserved.</span>
+          <Link href="/" className="hover:text-white">Genius Technology official website</Link>
+        </div>
         <div className="flex gap-4">
           <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-white">Terms of Service</Link>
